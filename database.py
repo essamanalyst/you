@@ -5,16 +5,19 @@ import streamlit as st
 from datetime import datetime
 import json
 from pathlib import Path
-
+from supabase.lib.client_options import ClientOptions
 try:
+
+    options = ClientOptions(
+        auto_refresh_token=True,
+        persist_session=True,
+        detect_session_in_url=False
+    )
+    
     supabase = create_client(
         supabase_url=st.secrets["SUPABASE_URL"],
         supabase_key=st.secrets["SUPABASE_KEY"],
-        options={
-            "auto_refresh_token": True,
-            "persist_session": True,
-            "detect_session_in_url": False
-        }
+        options=options
     )
 except Exception as e:
     st.error(f"فشل تهيئة Supabase: {str(e)}")
