@@ -7,11 +7,11 @@ import json
 from pathlib import Path
 from supabase.lib.client_options import ClientOptions
 try:
-
+    # إنشاء كائن ClientOptions مع المعلمات المتوافقة
     options = ClientOptions(
+        schema="public",
         auto_refresh_token=True,
-        persist_session=True,
-        detect_session_in_url=False
+        persist_session=True
     )
     
     supabase = create_client(
