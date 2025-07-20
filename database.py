@@ -7,17 +7,9 @@ import json
 from pathlib import Path
 from supabase.lib.client_options import ClientOptions
 try:
-    # إنشاء كائن ClientOptions مع المعلمات المتوافقة
-    options = ClientOptions(
-        schema="public",
-        auto_refresh_token=True,
-        persist_session=True
-    )
-    
     supabase = create_client(
-        supabase_url=st.secrets["SUPABASE_URL"],
-        supabase_key=st.secrets["SUPABASE_KEY"],
-        options=options
+        os.environ.get("SUPABASE_URL", st.secrets["SUPABASE_URL"]),
+        os.environ.get("SUPABASE_KEY", st.secrets["SUPABASE_KEY"])
     )
 except Exception as e:
     st.error(f"فشل تهيئة Supabase: {str(e)}")
