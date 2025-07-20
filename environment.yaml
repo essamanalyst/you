@@ -6,7 +6,7 @@ dependencies:
   - pip
   - pip:
     - streamlit==1.32.0
-    - supabase-py==1.0.3
+    - supabase-client==2.3.1
     - pandas==2.0.0
     - numpy==1.24.0
     - gotrue==2.12.3
