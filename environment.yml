@@ -2,7 +2,7 @@ name: myenv
 channels:
   - conda-forge
 dependencies:
-  - python=3.9
+  - python=3.13
   - pip
   - pip:
     - streamlit==1.32.0
