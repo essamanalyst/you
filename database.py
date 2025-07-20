@@ -1,5 +1,5 @@
 import os
-from supabase import create_client, Client
+from supabase_client import create_client, Client
 from typing import List, Dict, Optional, Tuple, Any, Union
 import streamlit as st
 from datetime import datetime
