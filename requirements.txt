@@ -1,8 +1,8 @@
-streamlit==1.32.0
+streamlit
 supabase-py
-pandas==2.0.0
-numpy==1.24.0
-gotrue==1.4.1
-postgrest-py==1.2.0
-realtime-py==1.1.1
-httpx==0.24.1
+pandas
+numpy
+gotrue
+postgrest-py
+realtime-py
+httpx
